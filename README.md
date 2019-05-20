@@ -47,3 +47,15 @@ This contains common styles for the menus.
 ### `config.yaml`
 
 Config file for the `hugo server`. It can be just empty.
+
+### `lib/`
+
+Contains the development version of JavaScript libraries downloaded
+from CDNs. They can be updated via:
+
+```
+cd lib
+curl -LO https://unpkg.com/react@16/umd/react.development.js
+curl -LO https://unpkg.com/react-dom@16/umd/react-dom.development.js
+curl -LO https://unpkg.com/babel-standalone@6.15.0/babel.min.js
+```
