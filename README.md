@@ -36,6 +36,14 @@ Loads the menu data and renders it as HTML.
 Defines a global `menu` constant, containing the menu details for a
 specific restaurant.
 
+### `main.js`
+
+This script contains the startup logic for the page.
+
+### `menu.css`
+
+This contains common styles for the menus.
+
 ### `config.yaml`
 
 Config file for the `hugo server`. It can be just empty.
