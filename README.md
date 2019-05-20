@@ -33,8 +33,8 @@ Loads the menu data and renders it as HTML.
 
 ### `db/*.js`
 
-Defines a global `menu` constant, containing the menu details for a
-specific restaurant.
+Defines a global constant, which is the camel case version
+of the filename, containing the menu of a specific restaurant.
 
 ### `main.js`
 

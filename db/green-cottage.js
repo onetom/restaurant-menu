@@ -1,4 +1,4 @@
-const menu = [
+const greenCottage = [
     {
         "Product": "House Coffee (Indonesia Blend)",
         "Chinese": "",
