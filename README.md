@@ -21,7 +21,7 @@ which supports auto-reload on file change and open a browser looking at it:
 
 ```
 nix-shell -p hugo
-hugo server --bind 0.0.0.0 --contentDir .
+hugo server --bind 0.0.0.0
 open http://localhost:1313/
 ```
 

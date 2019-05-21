@@ -1,0 +1,62 @@
+body {
+    padding: 10px;
+    border: 1px solid blueviolet;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+th.description {
+    width: auto;
+}
+
+th.price {
+    width: 8%;
+    text-align: right;
+}
+
+td.price {
+    vertical-align: top;
+}
+
+td.price textarea {
+    text-align: right;
+}
+
+textarea {
+    border: 0;
+    border: 1px dotted gray;
+    width: 100%;
+    font: 1em Georgia, Serif;
+    overflow: hidden;
+    resize: none;
+}
+
+td, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+textarea:hover {
+    background-color: lightyellow;
+}
+
+textarea:focus {
+    background-color: yellow;
+}
+
+#debug {
+    color: green;
+    background-color: black;
+    font-weight: bold;
+}

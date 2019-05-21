@@ -1,0 +1,58 @@
+const greenCottage = [
+    {
+        "EN": "House Coffee (Indonesia Blend)",
+        "CN": "",
+        "tags": "hot beverages",
+        "price1": 20,
+        "price2": 26,
+        "price3": 30,
+    },
+    {
+        "EN": "Colombia Single Origin",
+        "CN": "",
+        "tags": "h2,hot beverages",
+        "price1": "",
+        "price2": "",
+        "price3": "",
+    },
+    {
+        "EN": "Americano",
+        "CN": "",
+        "tags": "hot beverages",
+        "price1": 24,
+        "price2": 29,
+        "price3": 33,
+    },
+    {
+        "EN": "Espresso (single/double)",
+        "CN": "特快濃咖啡",
+        "tags": "hot beverages",
+        "price1": 22,
+        "price2": "",
+        "price3": 30,
+    },
+    {
+        "EN": "Machiato",
+        "CN": "",
+        "tags": "",
+        "price1": "",
+        "price2": "",
+        "price3": "",
+    },
+    {
+        "EN": "Latte",
+        "CN": "拉鐵咖啡",
+        "tags": "hot beverages",
+        "price1": 24,
+        "price2": "",
+        "price3": 34,
+    },
+    {
+        "EN": "",
+        "CN": "",
+        "tags": "",
+        "price1": "",
+        "price2": "",
+        "price3": "",
+    }
+]
