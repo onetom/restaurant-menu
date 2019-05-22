@@ -1,0 +1,77 @@
+body {
+    padding: 10px;
+    border: 1px solid blueviolet;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.menu th,
+table.menu td {
+    padding: 0.4em 0 0.4em 0;
+}
+
+th {
+    text-align: left;
+}
+
+td, th {
+    /*border: 1px solid black;*/
+}
+
+th.description {
+    width: auto;
+}
+
+th.price {
+    width: 8%;
+    min-width: 3em;
+    text-align: right;
+}
+
+td.price {
+    vertical-align: top;
+}
+
+td.price textarea,
+td.price div {
+    text-align: right;
+}
+
+td.price div::before {
+    content: "$";
+}
+
+td.price div:empty {
+    display: none;
+}
+
+textarea {
+    border: 0;
+    border: 1px dotted gray;
+    width: 100%;
+    font: 1em Serif;
+    overflow: hidden;
+    resize: none;
+}
+
+td, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+textarea:hover {
+    background-color: lightyellow;
+}
+
+textarea:focus {
+    background-color: yellow;
+}
+
+#debug {
+    color: green;
+    background-color: black;
+    font-weight: bold;
+}
