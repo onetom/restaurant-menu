@@ -1,41 +1,68 @@
-function MenuItem(item, idx) {
+const {useState} = React
+
+function Editable({editing, placeholder, value, rows, ...props}) {
+    return editing
+        ? <textarea {...props}
+                    placeholder={placeholder}
+                    defaultValue={value}
+                    rows={rows}/>
+        : <div {...props}>{value}</div>
+}
+
+function MenuItem(item) {
     return (
-        <tr key={`menu-item-${idx}`}>
+        <tr key={`menu-item-${item.key}`}>
             <td className="description">
-                <textarea placeholder={"English description"}
-                          defaultValue={item.EN}>
-                </textarea>
-                <textarea placeholder={"Chinese description"}
-                          defaultValue={item.CN}>
-                </textarea>
+                <Editable placeholder={"English description"}
+                          value={item.EN}
+                          editing={item.editing}>
+                </Editable>
+                <Editable placeholder={"Chinese description"}
+                          value={item.CN}
+                          editing={item.editing}>
+                </Editable>
             </td>
             <td className="price">
-                <textarea placeholder={"Price 1"}
-                          defaultValue={item.price1}
-                          rows={1}>
-                </textarea>
+                <Editable placeholder={"Price 1"}
+                          value={item.price1}
+                          rows={1}
+                          editing={item.editing}>
+                </Editable>
             </td>
             <td className="price">
-                <textarea placeholder={"Price 2"}
-                          defaultValue={item.price2}
-                          rows={1}>
-                </textarea>
+                <Editable placeholder={"Price 2"}
+                          value={item.price2}
+                          rows={1}
+                          editing={item.editing}>
+                </Editable>
             </td>
             <td className="price">
-                <textarea placeholder={"Price 3"}
-                          defaultValue={item.price3}
-                          rows={1}>
-                </textarea>
+                <Editable placeholder={"Price 3"}
+                          value={item.price3}
+                          rows={1}
+                          editing={item.editing}>
+                </Editable>
             </td>
         </tr>
     )
 }
 
-function Menu({menu}) {
+function MenuEditor({menu}) {
+    const [state, setState] = useState({
+        editing: true
+    })
+
+    const toggleEdit = () => setState({editing: !state.editing})
+
     return (
         <div>
-            <h1>Menu</h1>
-            <table>
+            <h1>
+                {state.editing
+                    ? <a href="#view" onClick={toggleEdit}>View</a>
+                    : <a href="#edit" onClick={toggleEdit}>Edit</a>}
+                &nbsp;menu
+            </h1>
+            <table className="menu">
                 <thead>
                 <tr>
                     <th className="description">Description</th>
@@ -46,7 +73,8 @@ function Menu({menu}) {
                 </thead>
 
                 <tbody>
-                {menu.map(MenuItem)}
+                {menu.map((item, key) =>
+                    MenuItem({...item, key, editing: state.editing}))}
                 </tbody>
             </table>
         </div>
@@ -54,9 +82,9 @@ function Menu({menu}) {
 }
 
 ReactDOM.render(
-    <Menu menu={greenCottage}/>,
+    <MenuEditor menu={greenCottage}/>,
     document.getElementById('root')
 )
 
 /* Manual DOM manipulations outside of React, for debugging purposes */
-document.getElementById('debug').innerText = JSON.stringify(greenCottage, false, 4)
+// document.getElementById('debug').innerText = JSON.stringify(greenCottage, false, 4)

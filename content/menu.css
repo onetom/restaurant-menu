@@ -8,12 +8,17 @@ table {
     width: 100%;
 }
 
+table.menu th,
+table.menu td {
+    padding: 0.4em 0 0.4em 0;
+}
+
 th {
     text-align: left;
 }
 
 td, th {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 th.description {
@@ -30,15 +35,24 @@ td.price {
     vertical-align: top;
 }
 
-td.price textarea {
+td.price textarea,
+td.price div {
     text-align: right;
+}
+
+td.price div::before {
+    content: "$";
+}
+
+td.price div:empty {
+    display: none;
 }
 
 textarea {
     border: 0;
     border: 1px dotted gray;
     width: 100%;
-    font: 1em Georgia, Serif;
+    font: 1em Serif;
     overflow: hidden;
     resize: none;
 }
