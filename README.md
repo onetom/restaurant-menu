@@ -19,6 +19,21 @@ npm dev
 open http://localhost:1313/
 ```
 
+
+
+## Deploy
+
+Deployment is done using the `gh-pages` nodejs package, which deploys
+the content of the `content/` directory to
+https://onetom.github.io/restaurant-menu/
+
+To deploy, simply run
+```bash
+npm run deploy
+```
+
+
+
 ## Structure
 
 ### `index.html`
