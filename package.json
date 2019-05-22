@@ -1,0 +1,24 @@
+{
+  "name": "restaurant-menu",
+  "version": "1.0.0",
+  "description": "Explore restaurant menu generation in HTML format.",
+  "scripts": {
+    "dev": "hugo server --bind 0.0.0.0",
+    "deploy": "gh-pages -d content",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://onetom.github.io/restaurant-menu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onetom/restaurant-menu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onetom/restaurant-menu/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

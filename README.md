@@ -10,18 +10,12 @@ On macOS install the [Nix package manager](https://nixos.org/nix/) using:
 curl https://nixos.org/nix/install | sh
 ```
 
-Install `nox` for convenient package search:
- 
-```
-nix-env -i nox
-```
-
 Run the [`hugo`](https://gohugo.io/commands/hugo_server/) webserver,
 which supports auto-reload on file change and open a browser looking at it:
 
 ```
-nix-shell -p hugo
-hugo server --bind 0.0.0.0
+nix-shell
+npm dev
 open http://localhost:1313/
 ```
 
@@ -54,7 +48,7 @@ Contains the development version of JavaScript libraries downloaded
 from CDNs. They can be updated via:
 
 ```
-cd lib
+cd content/lib
 curl -LO https://unpkg.com/react@16/umd/react.development.js
 curl -LO https://unpkg.com/react-dom@16/umd/react-dom.development.js
 curl -LO https://unpkg.com/babel-standalone@6.15.0/babel.min.js
