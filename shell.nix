@@ -12,6 +12,6 @@ with import (builtins.fetchTarball "https://releases.nixos.org/nixpkgs/nixpkgs-1
 mkShell rec {
     buildInputs = [
         hugo
-        nodejs-slim-12_x
+        nodejs-12_x
     ];
 }

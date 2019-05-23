@@ -13,9 +13,9 @@ curl https://nixos.org/nix/install | sh
 Run the [`hugo`](https://gohugo.io/commands/hugo_server/) webserver,
 which supports auto-reload on file change and open a browser looking at it:
 
-```
+```bash
 nix-shell
-npm dev
+npm run dev
 open http://localhost:1313/
 ```
 
