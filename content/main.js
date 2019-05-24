@@ -11,7 +11,7 @@ function Editable({editing, placeholder, value, rows, ...props}) {
 
 function MenuItem(item) {
     return (
-        <tr key={`menu-item-${item.key}`}>
+        <tr key={`menu-item-${item.id}`}>
             <td className="description">
                 <Editable placeholder={"English description"}
                           value={item.EN}
@@ -73,16 +73,18 @@ function MenuEditor({menu}) {
                 </thead>
 
                 <tbody>
-                {menu.map((item, key) =>
-                    MenuItem({...item, key, editing: state.editing}))}
+                {menu.map((item) =>
+                    MenuItem({...item, editing: state.editing}))}
                 </tbody>
             </table>
         </div>
     )
 }
 
+const greenCottageWithIds = greenCottage.map(item => ({...item, id: ULID.ulid()}))
+
 ReactDOM.render(
-    <MenuEditor menu={greenCottage}/>,
+    <MenuEditor menu={greenCottageWithIds}/>,
     document.getElementById('root')
 )
 
